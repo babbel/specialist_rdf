@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>be</base>
+		<eui>E0012152</eui>
+		<cat>aux</cat>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="base" type="basic" unInfl="be">be</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="infinitive" type="reg" unInfl="be">be</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres3s" type="reg" unInfl="be">is</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres3s" type="reg" unInfl="be">'s</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres3sNeg" type="reg" unInfl="be">isn't</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres1p23p" type="reg" unInfl="be">are</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres1p23p" type="reg" unInfl="be">'re</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres1p23pNeg" type="reg" unInfl="be">aren't</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres1s" type="reg" unInfl="be">am</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pres1s" type="reg" unInfl="be">'m</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="past1s3s" type="reg" unInfl="be">was</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="past1s3sNeg" type="reg" unInfl="be">wasn't</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="past1p23p" type="reg" unInfl="be">were</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="past1p23pNeg" type="reg" unInfl="be">weren't</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="pastPart" type="reg" unInfl="be">been</inflVars>
+		<inflVars cat="aux" cit="be" eui="E0012152" infl="presPart" type="reg" unInfl="be">being</inflVars>
+		<auxEntry>
+			<variant>be;infinitive</variant>
+			<variant>is;pres(thr_sing)</variant>
+			<variant>'s;pres(thr_sing)</variant>
+			<variant>isn't;pres(thr_sing):negative</variant>
+			<variant>are;pres(fst_plur,second,thr_plur)</variant>
+			<variant>'re;pres(fst_plur,second,thr_plur)</variant>
+			<variant>aren't;pres(fst_plur,second,thr_plur):negative</variant>
+			<variant>am;pres(fst_sing)</variant>
+			<variant>'m;pres(fst_sing)</variant>
+			<variant>was;past(fst_sing,thr_sing)</variant>
+			<variant>wasn't;past(fst_sing,thr_sing):negative</variant>
+			<variant>were;past(fst_plur,second,thr_plur)</variant>
+			<variant>weren't;past(fst_plur,second,thr_plur):negative</variant>
+			<variant>been;past_part</variant>
+			<variant>being;pres_part</variant>
+		</auxEntry>
+	</lexRecord>
+</lexRecords>

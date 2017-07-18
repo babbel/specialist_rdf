@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>I</base>
+		<eui>E0003242</eui>
+		<cat>pron</cat>
+		<inflVars cat="pron" cit="I" eui="E0003242" infl="base" type="basic" unInfl="I">I</inflVars>
+		<pronEntry>
+			<variants>fst_sing</variants>
+			<type>subj</type>
+			<gender type="pers"/>
+		</pronEntry>
+	</lexRecord>
+</lexRecords>

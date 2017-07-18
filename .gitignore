@@ -1,0 +1,7 @@
+*.DS_Store
+*.classpath
+*.project
+*.settings/
+src/main/java/specialist/rdf/xml/
+src/main/java/specialist/rdf/vocabulary/
+lib/eclipse-rdf4j-2.2.2-onejar.jar

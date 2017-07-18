@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>that</base>
+		<eui>E0060480</eui>
+		<cat>compl</cat>
+		<inflVars cat="compl" cit="that" eui="E0060480" infl="base" type="basic" unInfl="that">that</inflVars>
+	</lexRecord>
+</lexRecords>

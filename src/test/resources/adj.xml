@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+<lexRecord>
+	<base>AIDS-related</base>
+	<eui>E0000080</eui>
+	<cat>adj</cat>
+		<inflVars cat="adj" cit="AIDS-related" eui="E0000080" infl="base" type="basic" unInfl="AIDS-related">AIDS-related</inflVars>
+		<inflVars cat="adj" cit="AIDS-related" eui="E0000080" infl="positive" type="basic" unInfl="AIDS-related">AIDS-related</inflVars>
+		<adjEntry>
+			<variants>inv</variants>
+			<position type="attrib(3)"/>
+			<position type="pred"/>
+			<stative/>
+		</adjEntry>
+</lexRecord>
+</lexRecords>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+<lexRecord>
+	<base>East</base>
+	<eui>E0002301</eui>
+	<cat>adv</cat>
+		<inflVars cat="adv" cit="East" eui="E0002301" infl="base" type="basic" unInfl="East">East</inflVars>
+		<inflVars cat="adv" cit="East" eui="E0002301" infl="positive" type="basic" unInfl="East">East</inflVars>
+		<advEntry>
+			<variants>inv</variants>
+			<modification>verb_modifier;locative</modification>
+		</advEntry>
+</lexRecord>
+</lexRecords>

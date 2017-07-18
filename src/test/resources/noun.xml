@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>cotton roll gingivitis</base>
+		<eui>E0000001</eui>
+		<cat>noun</cat>
+		<spellingVars>cotton-roll gingivitis</spellingVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="base" type="basic" unInfl="cotton roll gingivitis">cotton roll gingivitis</inflVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="singular" type="basic" unInfl="cotton roll gingivitis">cotton roll gingivitis</inflVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="plural" type="glreg" unInfl="cotton roll gingivitis">cotton roll gingivitides</inflVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="base" type="basic" unInfl="cotton-roll gingivitis">cotton-roll gingivitis</inflVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="singular" type="basic" unInfl="cotton-roll gingivitis">cotton-roll gingivitis</inflVars>
+		<inflVars cat="noun" cit="cotton roll gingivitis" eui="E0000001" infl="plural" type="glreg" unInfl="cotton-roll gingivitis">cotton-roll gingivitides</inflVars>
+		<nounEntry>
+			<variants>glreg</variants>
+			<variants>uncount</variants>
+		</nounEntry>
+	</lexRecord>
+</lexRecords>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>accost</base>
+		<eui>E0006749</eui>
+		<cat>verb</cat>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="base" type="basic" unInfl="accost">accost</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="pres1p23p" type="basic" unInfl="accost">accost</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="infinitive" type="basic" unInfl="accost">accost</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="pres3s" type="reg" unInfl="accost">accosts</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="past" type="reg" unInfl="accost">accosted</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="pastPart" type="reg" unInfl="accost">accosted</inflVars>
+		<inflVars cat="verb" cit="accost" eui="E0006749" infl="presPart" type="reg" unInfl="accost">accosting</inflVars>
+		<verbEntry>
+			<variants>reg</variants>
+			<tran>np</tran>
+		</verbEntry>
+	</lexRecord>
+</lexRecords>

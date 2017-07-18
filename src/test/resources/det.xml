@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>a</base>
+		<eui>E0006419</eui>
+		<cat>det</cat>
+		<inflVars cat="det" cit="a" eui="E0006419" infl="base" type="basic" unInfl="a">a</inflVars>
+		<detEntry>
+			<variants>sing</variants>
+		</detEntry>
+	</lexRecord>
+</lexRecords>

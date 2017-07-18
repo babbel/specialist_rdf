@@ -1,0 +1,313 @@
+@prefix : <http://www.specialist-rdf.com/lexicon#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.specialist-rdf.com/lexicon> .
+
+<http://www.specialist-rdf.com/lexicon> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.specialist-rdf.com/lexicon#hasAdjEntry
+:hasAdjEntry rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasAdvEntry
+:hasAdvEntry rdf:type owl:ObjectProperty ;
+             rdfs:domain :LexRecord ;
+             rdfs:range :AdvEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasAuxEntry
+:hasAuxEntry rdf:type owl:ObjectProperty ;
+             rdfs:domain :LexRecord ;
+             rdfs:range :AuxEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasComplement
+:hasComplement rdf:type owl:ObjectProperty ;
+               rdfs:domain :VerbEntry ;
+               rdfs:range :Complement .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasDetEntry
+:hasDetEntry rdf:type owl:ObjectProperty ;
+             rdfs:domain :LexRecord ;
+             rdfs:range :DetEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasInflVar
+:hasInflVar rdf:type owl:ObjectProperty ;
+            rdfs:domain :LexRecord ;
+            rdfs:range :InflVar .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasLexRecord
+:hasLexRecord rdf:type owl:ObjectProperty ;
+              rdfs:domain :LexRecords ;
+              rdfs:range :LexRecord .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasModalEntry
+:hasModalEntry rdf:type owl:ObjectProperty ;
+               rdfs:domain :LexRecord ;
+               rdfs:range :ModalEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasNounEntry
+:hasNounEntry rdf:type owl:ObjectProperty ;
+              rdfs:domain :LexRecord ;
+              rdfs:range :NounEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasPronEntry
+:hasPronEntry rdf:type owl:ObjectProperty ;
+              rdfs:domain :LexRecord ;
+              rdfs:range :PronEntry .
+
+
+###  http://www.specialist-rdf.com/lexicon#hasVerbEntry
+:hasVerbEntry rdf:type owl:ObjectProperty ;
+              rdfs:domain :LexRecord ;
+              rdfs:range :VerbEntry .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.specialist-rdf.com/lexicon#abbreviation
+:abbreviation rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LexRecord ;
+              rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#acronym
+:acronym rdf:type owl:DatatypeProperty ;
+         rdfs:domain :LexRecord ;
+         rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#annotation
+:annotation rdf:type owl:DatatypeProperty .
+
+
+###  http://www.specialist-rdf.com/lexicon#base
+:base rdf:type owl:DatatypeProperty ;
+      rdfs:domain :LexRecord ;
+      rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#cat
+:cat rdf:type owl:DatatypeProperty ;
+     rdfs:domain :InflVar ,
+                 :LexRecord ;
+     rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#cit
+:cit rdf:type owl:DatatypeProperty ;
+     rdfs:domain :InflVar ;
+     rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#compl
+:compl rdf:type owl:DatatypeProperty ;
+       rdfs:domain :AdjEntry ,
+                   :NounEntry ;
+       rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#demonstrative
+:demonstrative rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DetEntry ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.specialist-rdf.com/lexicon#eui
+:eui rdf:type owl:DatatypeProperty ;
+     rdfs:domain :InflVar ,
+                 :LexRecord ;
+     rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#gender
+:gender rdf:type owl:DatatypeProperty ;
+        rdfs:domain :PronEntry ;
+        rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#infl
+:infl rdf:type owl:DatatypeProperty ;
+      rdfs:domain :InflVar ;
+      rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#interrogative
+:interrogative rdf:type owl:DatatypeProperty ;
+               rdfs:domain :AdvEntry ,
+                           :DetEntry ;
+               rdfs:range xsd:boolean .
+
+
+###  http://www.specialist-rdf.com/lexicon#modification
+:modification rdf:type owl:DatatypeProperty ;
+              rdfs:domain :AdvEntry ;
+              rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Complement ;
+      rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#negative
+:negative rdf:type owl:DatatypeProperty ;
+          rdfs:domain :AdvEntry ;
+          rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#nominalization
+:nominalization rdf:type owl:DatatypeProperty ;
+                rdfs:domain :AdjEntry ,
+                            :NounEntry ,
+                            :VerbEntry ;
+                rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#position
+:position rdf:type owl:DatatypeProperty ;
+          rdfs:domain :AdjEntry ;
+          rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#proper
+:proper rdf:type owl:DatatypeProperty ;
+        rdfs:domain :NounEntry ;
+        rdfs:range xsd:boolean .
+
+
+###  http://www.specialist-rdf.com/lexicon#signature
+:signature rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LexRecord ;
+           rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#spellingVar
+:spellingVar rdf:type owl:DatatypeProperty ;
+             rdfs:domain :LexRecord ;
+             rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#stative
+:stative rdf:type owl:DatatypeProperty ;
+         rdfs:domain :AdjEntry ;
+         rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#tradeName
+:tradeName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NounEntry ;
+           rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#trademark
+:trademark rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NounEntry ;
+           rdfs:range xsd:boolean .
+           
+###  http://www.specialist-rdf.com/lexicon#inflType
+:inflType rdf:type owl:DatatypeProperty ;
+      rdfs:domain :InflVar ;
+      rdfs:range xsd:string .
+
+###  http://www.specialist-rdf.com/lexicon#pronType
+:pronType rdf:type owl:DatatypeProperty ;
+      rdfs:domain :PronEntry ;
+      rdfs:range xsd:string .
+
+###  http://www.specialist-rdf.com/lexicon#unInfl
+:unInfl rdf:type owl:DatatypeProperty ;
+        rdfs:domain :InflVar ;
+        rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Complement ,
+                   :InflVar ;
+       rdfs:range xsd:string .
+
+
+###  http://www.specialist-rdf.com/lexicon#variant
+:variant rdf:type owl:DatatypeProperty ;
+         rdfs:domain :AdjEntry ,
+                     :AdvEntry ,
+                     :AuxEntry ,
+                     :DetEntry ,
+                     :ModalEntry ,
+                     :NounEntry ,
+                     :PronEntry ,
+                     :VerbEntry ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.specialist-rdf.com/lexicon#AdjEntry
+:AdjEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#AdvEntry
+:AdvEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#AuxEntry
+:AuxEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#Complement
+:Complement rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#DetEntry
+:DetEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#InflVar
+:InflVar rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#LexRecord
+:LexRecord rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#LexRecords
+:LexRecords rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#ModalEntry
+:ModalEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#NounEntry
+:NounEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#PronEntry
+:PronEntry rdf:type owl:Class .
+
+
+###  http://www.specialist-rdf.com/lexicon#VerbEntry
+:VerbEntry rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

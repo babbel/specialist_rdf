@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Slightly modified from original source: https://lexsrv3.nlm.nih.gov/LexSysGroup/Projects/lexicon/current/docs/designDoc/UDF/lexRecord/xml/ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:lx="http://umlslex.nlm.nih.gov/lexicon">
+	<xsd:element name="lexRecords" type="lexRecordsType" />
+
+	<!-- lexicon, lexRecords -->
+	<xsd:complexType name="lexRecordsType">
+		<xsd:sequence>
+			<xsd:element name="lexRecord" type="lexRecordType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- lexRecordType -->
+	<xsd:complexType name="lexRecordType">
+		<xsd:sequence>
+			<xsd:element name="base" type="xsd:string" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="eui" type="euiType" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="cat" type="catType" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="spellingVars" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="inflVars" type="inflVarsType"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:group ref="catEntryType" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="acronyms" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="abbreviations" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="annotations" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="signature" type="xsd:string"
+				minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- eui type -->
+	<xsd:simpleType name="euiType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[E]{1}[0-9]{7}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- cat type -->
+	<xsd:simpleType name="catType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="adj" />
+			<xsd:enumeration value="adv" />
+			<xsd:enumeration value="aux" />
+			<xsd:enumeration value="compl" />
+			<xsd:enumeration value="conj" />
+			<xsd:enumeration value="det" />
+			<xsd:enumeration value="modal" />
+			<xsd:enumeration value="noun" />
+			<xsd:enumeration value="prep" />
+			<xsd:enumeration value="pron" />
+			<xsd:enumeration value="verb" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- inflVars type -->
+	<xsd:complexType name="inflVarsType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="cat" type="catType" use="required" />
+				<xsd:attribute name="cit" type="xsd:string" use="required" />
+				<xsd:attribute name="eui" type="euiType" use="required" />
+				<xsd:attribute name="infl" type="inflType" use="required" />
+				<xsd:attribute name="type" type="inflTypeType" use="required" />
+				<xsd:attribute name="unInfl" type="xsd:string" use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<!-- infl Type -->
+	<xsd:simpleType name="inflType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="base" />
+			<xsd:enumeration value="comparative" />
+			<xsd:enumeration value="infinitive" />
+			<xsd:enumeration value="past" />
+			<xsd:enumeration value="past1p23p" />
+			<xsd:enumeration value="past1p23pNeg" />
+			<xsd:enumeration value="past1s3s" />
+			<xsd:enumeration value="past1s3sNeg" />
+			<xsd:enumeration value="pastNeg" />
+			<xsd:enumeration value="pastPart" />
+			<xsd:enumeration value="plural" />
+			<xsd:enumeration value="positive" />
+			<xsd:enumeration value="pres" />
+			<xsd:enumeration value="pres123p" />
+			<xsd:enumeration value="pres123pNeg" />
+			<xsd:enumeration value="pres1p23p" />
+			<xsd:enumeration value="pres1p23pNeg" />
+			<xsd:enumeration value="pres1s" />
+			<xsd:enumeration value="pres3s" />
+			<xsd:enumeration value="pres3sNeg" />
+			<xsd:enumeration value="presNeg" />
+			<xsd:enumeration value="presPart" />
+			<xsd:enumeration value="singular" />
+			<xsd:enumeration value="superlative" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="inflTypeTypeEnum">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="basic" />
+			<xsd:enumeration value="glreg" />
+			<xsd:enumeration value="group(glreg)" />
+			<xsd:enumeration value="group(irreg)" />
+			<xsd:enumeration value="group(reg)" />
+			<xsd:enumeration value="group(sing)" />
+			<xsd:enumeration value="groupuncount" />
+			<xsd:enumeration value="inv" />
+			<xsd:enumeration value="irreg" />
+			<xsd:enumeration value="metareg" />
+			<xsd:enumeration value="plur" />
+			<xsd:enumeration value="reg" />
+			<xsd:enumeration value="regd" />
+
+			<xsd:enumeration value="free" />
+			<xsd:enumeration value="fstPlur" />
+			<xsd:enumeration value="fstSing" />
+			<xsd:enumeration value="group(metareg)" />
+			<xsd:enumeration value="invPeriph" />
+			<xsd:enumeration value="plurUncount" />
+			<xsd:enumeration value="second" />
+			<xsd:enumeration value="secPlur" />
+			<xsd:enumeration value="secSing" />
+			<xsd:enumeration value="sing" />
+			<xsd:enumeration value="singUncount" />
+			<xsd:enumeration value="third" />
+			<xsd:enumeration value="thrPlur" />
+			<xsd:enumeration value="thrSing" />
+			<xsd:enumeration value="uncount" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- type Type -->
+	<xsd:simpleType name="inflTypeType">
+		<xsd:union memberTypes="inflTypeTypeEnum">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="group\(irreg.*\|.*\|.*\|\)" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+
+	<!-- catEntry type: -->
+	<xsd:group name="catEntryType">
+		<xsd:choice>
+			<xsd:element name="adjEntry" type="adjEntryType" />
+			<xsd:element name="advEntry" type="advEntryType" />
+			<xsd:element name="auxEntry" type="auxEntryType" />
+			<xsd:element name="detEntry" type="detEntryType" />
+			<xsd:element name="modalEntry" type="modalEntryType" />
+			<xsd:element name="nounEntry" type="nounEntryType" />
+			<xsd:element name="pronEntry" type="pronEntryType" />
+			<xsd:element name="verbEntry" type="verbEntryType" />
+		</xsd:choice>
+	</xsd:group>
+
+	<!-- pronEntry -->
+	<xsd:complexType name="pronEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="pronVariant"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="type" type="pronType" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="gender" type="genderType" minOccurs="0"
+				maxOccurs="1" />
+			<xsd:element name="interrogative" minOccurs="0"
+				maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="pronVariant">
+		<xsd:attribute name="type" type="pronVariantType" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="pronVariantType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="fst_sing" />
+			<xsd:enumeration value="thr_plur" />
+			<xsd:enumeration value="thr_sing" />
+			<xsd:enumeration value="fst_plur" />
+			<xsd:enumeration value="sec_plur" />
+			<xsd:enumeration value="third" />
+			<xsd:enumeration value="second" />
+			<xsd:enumeration value="sec_sing" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="pronType">
+		<xsd:attribute name="type" type="pronTypeType" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="pronTypeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="subj" />
+			<xsd:enumeration value="univ" />
+			<xsd:enumeration value="obj" />
+			<xsd:enumeration value="indef(nonassert)" />
+			<xsd:enumeration value="refl" />
+			<xsd:enumeration value="poss" />
+			<xsd:enumeration value="possnom" />
+			<xsd:enumeration value="indef(neg)" />
+			<xsd:enumeration value="indef(assert)" />
+			<xsd:enumeration value="dem" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="genderType">
+		<xsd:attribute name="type" type="genderTypeType" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="genderTypeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="pers(masc)" />
+			<xsd:enumeration value="pers(fem)" />
+			<xsd:enumeration value="pers" />
+			<xsd:enumeration value="neut" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- nounEntry -->
+	<xsd:complexType name="nounEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="nounVariants"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="compl" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="nominalization" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="tradeName" type="xsd:string"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="trademark" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="proper" minOccurs="0" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="nounVariantsEnum">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="glreg" />
+			<xsd:enumeration value="uncount" />
+			<xsd:enumeration value="reg" />
+			<xsd:enumeration value="metareg" />
+			<xsd:enumeration value="groupuncount" />
+			<xsd:enumeration value="plur" />
+			<xsd:enumeration value="sing" />
+			<xsd:enumeration value="inv" />
+			<xsd:enumeration value="group(sing)" />
+			<xsd:enumeration value="group(reg)" />
+			<xsd:enumeration value="group(glreg)" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- type Type -->
+	<xsd:simpleType name="nounVariants">
+		<xsd:union memberTypes="nounVariantsEnum">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="^group\(irreg.*\|.*\|.*\|\)$|^irreg.*\|.*\|.*\|$" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+
+	<!-- modalEntry -->
+	<xsd:complexType name="modalEntryType">
+		<xsd:sequence>
+			<xsd:element name="variant" type="modalVar" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="modalVar">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="could;past" />
+			<xsd:enumeration value="couldn't;past:negative" />
+			<xsd:enumeration value="cannot;pres:negative" />
+			<xsd:enumeration value="can't;pres:negative" />
+			<xsd:enumeration value="daren't;pres:negative" />
+			<xsd:enumeration value="might;past" />
+			<xsd:enumeration value="mayn't;pres:negative" />
+			<xsd:enumeration value="mightn't;past:negative" />
+			<xsd:enumeration value="mustn't;pres:negative" />
+			<xsd:enumeration value="oughtn't;pres:negative" />
+			<xsd:enumeration value="should;past" />
+			<xsd:enumeration value="shan't;pres:negative" />
+			<xsd:enumeration value="shouldn't;past:negative" />
+			<xsd:enumeration value="'d;past" />
+			<xsd:enumeration value="would;past" />
+			<xsd:enumeration value="won't;pres:negative" />
+			<xsd:enumeration value="wouldn't;past:negative" />
+			<xsd:enumeration value="'ll;pres" />
+			<xsd:enumeration value="needn't;pres:negative" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="adjEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="xsd:string" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xsd:element name="position" type="positionType"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="compl" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="stative" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="nominalization" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="positionType">
+		<xsd:attribute name="type" type="typeType" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="typeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="attrib(1)" />
+			<xsd:enumeration value="attrib(2)" />
+			<xsd:enumeration value="attrib(3)" />
+			<xsd:enumeration value="attribc" />
+			<xsd:enumeration value="pred" />
+			<xsd:enumeration value="post" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<xsd:complexType name="verbEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="xsd:string" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xsd:group ref="complementType" minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="nominalization" type="xsd:string"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:group name="complementType">
+		<xsd:sequence>
+			<xsd:element name="intran" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="tran" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="ditran" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="link" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+			<xsd:element name="cplxtran" type="xsd:string" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:group>
+
+	<!-- advEntry -->
+	<xsd:complexType name="advEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="xsd:string" minOccurs="1"
+				maxOccurs="unbounded" />
+			<xsd:element name="modification" type="xsd:string"
+				minOccurs="1" maxOccurs="unbounded" />
+			<xsd:element name="negative" type="negativeType"
+				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="interrogative" minOccurs="0"
+				maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="negativeType">
+		<xsd:attribute name="type" type="negativeTypeType" use="required" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="negativeTypeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="negative" />
+			<xsd:enumeration value="broad_negative" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- auxEntry -->
+	<xsd:complexType name="auxEntryType">
+		<xsd:sequence>
+			<xsd:element name="variant" type="xsd:string" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- detEntry -->
+	<xsd:complexType name="detEntryType">
+		<xsd:sequence>
+			<xsd:element name="variants" type="xsd:string" minOccurs="1"
+				maxOccurs="1" />
+			<xsd:element name="interrogative" minOccurs="0"
+				maxOccurs="1" />
+			<xsd:element name="demonstrative" minOccurs="0"
+				maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

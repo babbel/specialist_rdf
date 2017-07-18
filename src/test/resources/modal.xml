@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexRecords>
+	<lexRecord>
+		<base>can</base>
+		<eui>E0014877</eui>
+		<cat>modal</cat>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="base" type="basic" unInfl="can">can</inflVars>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="pres" type="basic" unInfl="can">can</inflVars>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="past" type="reg" unInfl="can">could</inflVars>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="pastNeg" type="reg" unInfl="can">couldn't</inflVars>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="presNeg" type="reg" unInfl="can">cannot</inflVars>
+		<inflVars cat="modal" cit="can" eui="E0014877" infl="presNeg" type="reg" unInfl="can">can't</inflVars>
+		<modalEntry>
+			<variant>could;past</variant>
+			<variant>couldn't;past:negative</variant>
+			<variant>cannot;pres:negative</variant>
+			<variant>can't;pres:negative</variant>
+		</modalEntry>
+	</lexRecord>
+</lexRecords>
