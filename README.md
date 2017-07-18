@@ -15,8 +15,6 @@ Run `mvn clean install` to create the JAR file.
 
 Download the SPECIALIST lexicon 2017 XML file from `https://lexsrv3.nlm.nih.gov/LexSysGroup/Projects/lexicon/2017/release/LEX/XML/LEXICON.xml`. 
 
-It may be necessary to create smaller XML files to get the JAR to run, depending on available memory.
-
 ## Running
 Run with `java -jar specialist-rdf-jar-with-dependencies.jar -s <source XML file> -d <destination NQuads file>`
 
